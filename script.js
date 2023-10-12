@@ -22,7 +22,8 @@ let printMovies = () => {
     allMovies.forEach(movie => {
         displayText(movie.title + ", rating of " + movie.rating + ", havewatched: " + movie.haveWatched);
     })
-    displayText("\nYou have " + allMovies.length + " movies in total");
+    displayBlankLine();
+    displayText("You have " + allMovies.length + " movies in total");
 }
 
 
@@ -37,7 +38,7 @@ let highRatings = (rating) => {
             i++;
         }
     })
-    displayText("")
+    displayBlankLine();
     displayText("In total, there are " + i + " matches");
 }
 
@@ -56,6 +57,11 @@ let displayText = (text) => {
     let newNode = document.createElement("div");
     let newNodeText = document.createTextNode(text);
     newNode.appendChild(newNodeText);
+    node.appendChild(newNode);
+}
+let displayBlankLine = () => {
+    let node = document.getElementById("result");
+    let newNode = document.createElement("br");
     node.appendChild(newNode);
 }
 
