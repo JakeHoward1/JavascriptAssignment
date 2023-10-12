@@ -37,7 +37,8 @@ let highRatings = (rating) => {
             i++;
         }
     })
-    displayText("\nIn total, there are " + i + " matches");
+    displayText("")
+    displayText("In total, there are " + i + " matches");
 }
 
 
